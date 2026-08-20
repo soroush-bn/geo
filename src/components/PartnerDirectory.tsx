@@ -77,7 +77,7 @@ export default function PartnerDirectory() {
             ) : (
               <tr>
                 <td colSpan={2} className="px-6 py-8 text-center text-sm text-gray-500">
-                  No partners found matching "{searchTerm}"
+                  No partners found matching &quot;{searchTerm}&quot;
                 </td>
               </tr>
             )}
