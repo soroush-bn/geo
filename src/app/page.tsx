@@ -19,7 +19,11 @@ export default function Dashboard() {
             <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
               G
             </div>
-            <h1 className="font-bold text-xl tracking-tight text-gray-900">GEO Nova Scotia Impact</h1>
+            <h1 className="font-bold text-xl tracking-tight text-gray-900">
+              <a href="https://geonovascotia.ca/reports/annual-reports/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">
+                GEO Nova Scotia Impact
+              </a>
+            </h1>
           </div>
           
           <div className="flex items-center gap-2 bg-gray-100 p-1 rounded-lg">
@@ -75,9 +79,9 @@ export default function Dashboard() {
       </main>
 
       {/* Footer Disclaimer */}
-      <footer className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-4 text-center">
-        <p className="text-sm text-gray-400">
-          * All information and data presented on this dashboard are sourced directly from the official GEO Nova Scotia reports (geonovascotia.ca).
+      <footer className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 pb-4 border-t border-gray-200 text-center">
+        <p className="text-sm font-medium text-gray-600">
+          * All information and data presented on this dashboard are sourced directly from the official <a href="https://geonovascotia.ca/reports/annual-reports/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">GEO Nova Scotia reports</a>.
         </p>
       </footer>
     </div>
