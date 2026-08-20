@@ -73,6 +73,13 @@ export default function Dashboard() {
           <PartnerDirectory />
         </div>
       </main>
+
+      {/* Footer Disclaimer */}
+      <footer className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-4 text-center">
+        <p className="text-sm text-gray-400">
+          * All information and data presented on this dashboard are sourced directly from the official GEO Nova Scotia reports (geonovascotia.ca).
+        </p>
+      </footer>
     </div>
   );
 }
