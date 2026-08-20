@@ -7,10 +7,8 @@ import FinancialTransparency from "@/components/FinancialTransparency";
 import Demographics from "@/components/Demographics";
 import PartnerDirectory from "@/components/PartnerDirectory";
 
-import StrategicPlanView from "@/components/StrategicPlanView";
-
 export default function Dashboard() {
-  const [viewYear, setViewYear] = useState<"2024" | "2025" | "yoy" | "strategic">("2025");
+  const [viewYear, setViewYear] = useState<"2024" | "2025" | "yoy">("2025");
 
   return (
     <div className="min-h-screen bg-[#f8fafc] text-gray-900 pb-12">
@@ -47,49 +45,37 @@ export default function Dashboard() {
             >
               YoY Comparison
             </button>
-            <button 
-              onClick={() => setViewYear("strategic")}
-              className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${viewYear === "strategic" ? "bg-white text-indigo-600 shadow-sm" : "text-gray-600 hover:text-gray-900"}`}
-            >
-              Strategic Plan
-            </button>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        {viewYear !== "strategic" ? (
-          <>
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Annual Impact Report</h2>
-              <p className="text-gray-500">
-                {viewYear === "2024" && "Displaying data for the April 1, 2024 – March 31, 2025 reporting period."}
-                {viewYear === "2025" && "Displaying data for the April 1, 2025 – March 31, 2026 reporting period."}
-                {viewYear === "yoy" && "Comparing performance between the 2024-25 and 2025-26 fiscal years."}
-              </p>
-            </div>
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Annual Impact Report</h2>
+          <p className="text-gray-500">
+            {viewYear === "2024" && "Displaying data for the April 1, 2024 – March 31, 2025 reporting period."}
+            {viewYear === "2025" && "Displaying data for the April 1, 2025 – March 31, 2026 reporting period."}
+            {viewYear === "yoy" && "Comparing performance between the 2024-25 and 2025-26 fiscal years."}
+          </p>
+        </div>
 
-            <KPIHeader year={viewYear} />
-            
-            <HardwareDistribution year={viewYear} />
-            
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-              <div className="flex flex-col gap-8">
-                <FinancialTransparency />
-              </div>
-              <div className="flex flex-col gap-8">
-                <Demographics year={viewYear} />
-              </div>
-            </div>
+        <KPIHeader year={viewYear} />
+        
+        <HardwareDistribution year={viewYear} />
+        
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+          <div className="flex flex-col gap-8">
+            <FinancialTransparency />
+          </div>
+          <div className="flex flex-col gap-8">
+            <Demographics year={viewYear} />
+          </div>
+        </div>
 
-            <div className="mt-8">
-              <PartnerDirectory />
-            </div>
-          </>
-        ) : (
-          <StrategicPlanView />
-        )}
+        <div className="mt-8">
+          <PartnerDirectory />
+        </div>
       </main>
 
       {/* Footer Disclaimer */}
