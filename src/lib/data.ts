@@ -93,8 +93,8 @@ export const data2025 = {
         "other_revenue_cad": 57244
       },
       "expenditures_breakdown": {
-        "internet_connections_and_mobile_plans_cad": 1778742,
-        "devices_and_applications_cad": 1316769,
+        "internet_connections_and_mobile_plans_cad": 1447517,
+        "devices_and_applications_cad": 1303071,
         "operations_expenses_cad": 925188,
         "program_salaries_cad": 535317
       }
@@ -137,37 +137,37 @@ export const data2025 = {
 export const data2024 = {
   ...data2025,
   overall_impact_summary: {
-    households_supported: 4500,
-    household_members_impacted: 9500,
-    total_registered_referral_partners: 126,
-    new_referral_partners_added: 20,
-    total_connectivity_months_provided: 38000,
-    total_connectivity_years_equivalent: 3166.7
+    households_supported: 2696,
+    household_members_impacted: 2926,
+    total_registered_referral_partners: 128,
+    new_referral_partners_added: 45,
+    total_connectivity_months_provided: 26388,
+    total_connectivity_years_equivalent: 2199
   },
   devices_and_connections_distributed: {
     hardware_and_apps: [
-      { type: "Chromebooks & Headsets", quantity: 800, estimated_value_cad: 440000 },
-      { type: "Laptops & Headsets", quantity: 70, estimated_value_cad: 84000 },
-      { type: "iPads", quantity: 350, estimated_value_cad: 157500 },
-      { type: "Smartphones", quantity: 1100, estimated_value_cad: 385000 },
-      { type: "AAC Apps", quantity: 120, estimated_value_cad: 30000 }
+      { type: "Chromebooks & Headsets", quantity: 2012, estimated_value_cad: 0 },
+      { type: "Laptops & Headsets", quantity: 120, estimated_value_cad: 0 },
+      { type: "iPads", quantity: 250, estimated_value_cad: 0 },
+      { type: "Smartphones", quantity: 1066, estimated_value_cad: 0 },
+      { type: "AAC Apps", quantity: 0, estimated_value_cad: 0 }
     ],
     connectivity_services: [
-      { type: "Active Internet Connections", unique_connections: 2400, total_months: 21000, estimated_value_cad: 1400000 },
-      { type: "Active Mobile Plans", unique_connections: 1600, total_months: 16000, estimated_value_cad: 600000 }
+      { type: "Active Internet Connections", unique_connections: 2199, total_months: 0, estimated_value_cad: 0 },
+      { type: "Active Mobile Plans", unique_connections: 1041, total_months: 0, estimated_value_cad: 0 }
     ]
   },
   participant_demographics_detailed: {
-    total_households_surveyed: 4500,
+    total_households_surveyed: 2696,
     equity_and_vulnerability_indicators_pct: {
       "homelessness_housing_insecurity": { "yes": 32.0 },
-      "living_with_disability": { "yes": 34.0 },
-      "single_parent_households": { "yes": 25.0 },
-      "newcomers_to_canada": { "yes": 10.0 },
-      "two_s_lgbtqia_plus": { "yes": 6.0 },
-      "receiving_income_assistance": { "yes": 27.0 },
-      "single_person_households": { "yes": 28.0 },
-      "households_with_children": { "yes": 42.0 }
+      "living_with_disability": { "yes": 35.5 },
+      "single_parent_households": { "yes": 27.9 },
+      "newcomers_to_canada": { "yes": 14.9 },
+      "two_s_lgbtqia_plus": { "yes": 7.9 },
+      "receiving_income_assistance": { "yes": 44.0 },
+      "single_person_households": { "yes": 30.0 },
+      "households_with_children": { "yes": 51.2 }
     }
   }
 };
